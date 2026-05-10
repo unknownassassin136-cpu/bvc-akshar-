@@ -8,6 +8,11 @@ export const environment = {
     secretaryImage: '/assets/leadership/secretary.jpg'
   },
 
+  campus: {
+    hostelImage: '/assets/campus-life/hostel.jpg',
+    transportImage: '/assets/campus-life/transport.jpg'
+  },
+
   media: {
     heroVideo: '/assets/hero/hero-bg.mp4',
     heroImage: '/assets/hero/hero-bg.jpg',
@@ -31,8 +36,8 @@ export const environment = {
     ],
 
     reels: [
-      { id: 1, type: 'reel', category: 'Cultural Events', thumbnail: '/assets/reels/reel-1-thumb.jpg', videoUrl: '' },
-      { id: 2, type: 'reel', category: 'Campus Life', thumbnail: '/assets/reels/reel-2-thumb.jpg', videoUrl: '' }
+      { id: 1, type: 'reel', category: 'Cultural Events', thumbnail: '/assets/reels/reel-1-thumb.jpg', videoUrl: '/assets/reels/reel-1.mp4' },
+      { id: 2, type: 'reel', category: 'Campus Life', thumbnail: '/assets/reels/reel-2-thumb.jpg', videoUrl: '/assets/reels/reel-2.mp4' }
     ]
   },
 

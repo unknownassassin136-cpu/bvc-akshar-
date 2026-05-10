@@ -6,6 +6,16 @@
     <div #heroBg 
          class="absolute inset-0 bg-cover bg-center bg-no-repeat" 
          [style.backgroundImage]="'url(' + heroImage + ')'">
+      @if (heroVideo) {
+        <video 
+          [src]="heroVideo"
+          autoplay 
+          muted 
+          loop 
+          playsinline 
+          class="absolute inset-0 w-full h-full object-cover">
+        </video>
+      }
     </div>
     
     <!-- Dark/Gradient Overlays for cinematic feel -->

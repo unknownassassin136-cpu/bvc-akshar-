@@ -4,6 +4,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+import { environment } from '../../../../../environments/environment';
+
 @Component({
   selector: 'app-campus-life',
   standalone: true,
@@ -13,6 +15,8 @@ gsap.registerPlugin(ScrollTrigger);
 })
 export class CampusLife implements AfterViewInit, OnDestroy {
   @ViewChild('campusSection') campusSection!: ElementRef;
+  
+  campus = environment.campus;
   private ctx!: gsap.Context;
 
   ngAfterViewInit() {

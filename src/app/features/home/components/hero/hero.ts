@@ -14,6 +14,7 @@ export class Hero implements AfterViewInit, OnDestroy {
   @ViewChild('heroBg') heroBg!: ElementRef;
   
   heroImage = environment.media.heroImage;
+  heroVideo = environment.media.heroVideo;
   private ctx!: gsap.Context;
 
   ngAfterViewInit() {

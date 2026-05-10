@@ -17,7 +17,7 @@
         <!-- Image Area -->
         <div class="h-64 overflow-hidden relative">
           <div class="absolute inset-0 bg-brand-blue/30 group-hover:bg-brand-blue/10 transition-colors duration-500 z-10"></div>
-          <img src="https://placehold.co/800x400/003366/ffffff?text=Premium+Hostel" alt="Hostel Facility" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <img [src]="campus.hostelImage" alt="Hostel Facility" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
           
           <!-- Floating Badge -->
           <div class="absolute top-6 left-6 z-20 glassmorphism px-4 py-2 rounded-full border border-white/30 flex items-center shadow-lg">
@@ -60,7 +60,7 @@
         <!-- Image Area -->
         <div class="h-64 overflow-hidden relative">
           <div class="absolute inset-0 bg-brand-blue/30 group-hover:bg-brand-blue/10 transition-colors duration-500 z-10"></div>
-          <img src="https://placehold.co/800x400/003366/ffffff?text=Safe+Transport" alt="Transport Facility" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <img [src]="campus.transportImage" alt="Transport Facility" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
           
           <!-- Floating Badge -->
           <div class="absolute top-6 left-6 z-20 glassmorphism px-4 py-2 rounded-full border border-white/30 flex items-center shadow-lg">
