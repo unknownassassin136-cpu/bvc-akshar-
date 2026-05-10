@@ -1,32 +1,57 @@
-<nav [class.bg-white/80]="isScrolled" [class.backdrop-blur-md]="isScrolled" class="fixed w-full z-50 transition-all duration-300 bg-white shadow-sm">
+<nav [class.bg-white]="isScrolled" 
+     [class.backdrop-blur-md]="isScrolled" 
+     [class.bg-white/90]="isScrolled"
+     [class.py-2]="isScrolled"
+     [class.py-4]="!isScrolled"
+     [class.bg-transparent]="!isScrolled"
+     [class.shadow-lg]="isScrolled"
+     class="fixed w-full z-50 transition-all duration-500">
+  
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-20">
+    <div class="flex justify-between items-center h-20 transition-all duration-500" [class.h-16]="isScrolled">
       
       <!-- Logo section -->
-      <div class="flex-shrink-0 flex items-center cursor-pointer" routerLink="/">
-        <div class="w-12 h-12 bg-brand-blue rounded-full flex items-center justify-center text-white font-serif font-bold text-xl mr-3 shadow-md">
+      <a routerLink="/" class="flex-shrink-0 flex items-center cursor-pointer no-underline group">
+        <div class="w-12 h-12 bg-brand-blue rounded-full flex items-center justify-center text-white font-serif font-bold text-xl mr-3 shadow-md group-hover:scale-110 transition-transform duration-300"
+             [class.w-10]="isScrolled" [class.h-10]="isScrolled">
           BVC
         </div>
         <div class="flex flex-col">
-          <span class="font-serif font-bold text-xl text-brand-blue leading-tight tracking-wide">AKSHAR</span>
-          <span class="text-xs font-sans text-brand-gold font-semibold uppercase tracking-widest">Junior College</span>
+          <span class="font-serif font-bold text-xl leading-tight tracking-wide transition-colors duration-300"
+                [class.text-brand-blue]="isScrolled" [class.text-white]="!isScrolled"
+                [class.text-lg]="isScrolled">AKSHAR</span>
+          <span class="text-[10px] font-sans text-brand-gold font-semibold uppercase tracking-widest">Junior College</span>
         </div>
-      </div>
+      </a>
 
       <!-- Desktop Menu -->
       <div class="hidden md:flex items-center space-x-8">
-        <a routerLink="/" class="text-slate-700 hover:text-brand-blue font-medium transition-colors cursor-pointer text-sm uppercase tracking-wider">Home</a>
-        <a class="text-slate-700 hover:text-brand-blue font-medium transition-colors cursor-pointer text-sm uppercase tracking-wider">Academics</a>
-        <a class="text-slate-700 hover:text-brand-blue font-medium transition-colors cursor-pointer text-sm uppercase tracking-wider">Admissions</a>
-        <a class="text-slate-700 hover:text-brand-blue font-medium transition-colors cursor-pointer text-sm uppercase tracking-wider">Campus</a>
-        <button class="bg-brand-blue hover:bg-brand-blue/90 text-white px-6 py-2 rounded-full font-medium transition-colors shadow-md hover:shadow-lg text-sm uppercase tracking-wider">
+        <a routerLink="/" 
+           class="font-medium transition-colors cursor-pointer text-xs uppercase tracking-widest hover:text-brand-gold"
+           [class.text-slate-700]="isScrolled" [class.text-white]="!isScrolled">Home</a>
+        
+        <a href="#programs" 
+           class="font-medium transition-colors cursor-pointer text-xs uppercase tracking-widest hover:text-brand-gold"
+           [class.text-slate-700]="isScrolled" [class.text-white]="!isScrolled">Academics</a>
+        
+        <a href="#gallery" 
+           class="font-medium transition-colors cursor-pointer text-xs uppercase tracking-widest hover:text-brand-gold"
+           [class.text-slate-700]="isScrolled" [class.text-white]="!isScrolled">Life @ BVC</a>
+        
+        <a href="#campus" 
+           class="font-medium transition-colors cursor-pointer text-xs uppercase tracking-widest hover:text-brand-gold"
+           [class.text-slate-700]="isScrolled" [class.text-white]="!isScrolled">Campus</a>
+        
+        <button class="bg-brand-gold hover:bg-brand-gold-light text-brand-blue px-6 py-2.5 rounded-full font-bold transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 text-xs uppercase tracking-widest">
           Apply Now
         </button>
       </div>
 
       <!-- Mobile menu button -->
       <div class="md:hidden flex items-center">
-        <button (click)="toggleMobileMenu()" class="text-slate-700 hover:text-brand-blue focus:outline-none p-2">
+        <button (click)="toggleMobileMenu()" 
+                class="focus:outline-none p-2 transition-colors duration-300"
+                [class.text-slate-700]="isScrolled" [class.text-white]="!isScrolled">
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             @if(!isMobileMenuOpen) {
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -41,15 +66,17 @@
 
   <!-- Mobile Menu Panel -->
   @if(isMobileMenuOpen) {
-    <div class="md:hidden bg-white border-t border-slate-100 shadow-lg absolute w-full">
-      <div class="px-4 pt-2 pb-4 space-y-1 flex flex-col">
-        <a routerLink="/" class="block px-3 py-3 text-base font-medium text-slate-800 hover:text-brand-blue hover:bg-slate-50 rounded-md">Home</a>
-        <a class="block px-3 py-3 text-base font-medium text-slate-800 hover:text-brand-blue hover:bg-slate-50 rounded-md">Academics</a>
-        <a class="block px-3 py-3 text-base font-medium text-slate-800 hover:text-brand-blue hover:bg-slate-50 rounded-md">Admissions</a>
-        <a class="block px-3 py-3 text-base font-medium text-slate-800 hover:text-brand-blue hover:bg-slate-50 rounded-md">Campus</a>
-        <button class="w-full mt-4 bg-brand-blue text-white px-6 py-3 rounded-full font-medium transition-colors">
-          Apply Now
-        </button>
+    <div class="md:hidden bg-white border-t border-slate-100 shadow-2xl absolute w-full animate-in slide-in-from-top duration-300">
+      <div class="px-4 pt-4 pb-8 space-y-2 flex flex-col">
+        <a routerLink="/" (click)="isMobileMenuOpen = false" class="block px-4 py-3 text-sm font-bold text-slate-800 hover:text-brand-blue hover:bg-slate-50 rounded-xl transition-all">Home</a>
+        <a href="#programs" (click)="isMobileMenuOpen = false" class="block px-4 py-3 text-sm font-bold text-slate-800 hover:text-brand-blue hover:bg-slate-50 rounded-xl transition-all">Academics</a>
+        <a href="#gallery" (click)="isMobileMenuOpen = false" class="block px-4 py-3 text-sm font-bold text-slate-800 hover:text-brand-blue hover:bg-slate-50 rounded-xl transition-all">Gallery</a>
+        <a href="#campus" (click)="isMobileMenuOpen = false" class="block px-4 py-3 text-sm font-bold text-slate-800 hover:text-brand-blue hover:bg-slate-50 rounded-xl transition-all">Campus</a>
+        <div class="pt-4 px-4">
+          <button class="w-full bg-brand-blue text-white px-6 py-4 rounded-xl font-bold shadow-lg shadow-brand-blue/20">
+            Apply Now
+          </button>
+        </div>
       </div>
     </div>
   }
