@@ -19,13 +19,13 @@ export const environment = {
   },
 
   campus: {
-    hostelImage: '/assets/campus-life/hostel.jpg',
-    transportImage: '/assets/campus-life/transport.jpg'
+    hostelImage: '/assets/campus-life/hostel.png',
+    transportImage: '/assets/campus-life/transport.png'
   },
 
   facilities: {
-    bgImage: '/assets/facilities/bg.jpg',
-    campusImage: '/assets/facilities/campus.jpg'
+    bgImage: '/assets/facilities/bg.png',
+    campusImage: '/assets/facilities/campus.png'
   },
 
   media: {
@@ -35,18 +35,18 @@ export const environment = {
     categories: ['All', 'Cultural Events', 'Freshers Party', 'Seminars', 'Achievements', 'Campus Life', 'Leadership Moments'],
 
     gallery: [
-      { id: 1, type: 'image', category: 'Campus Life', url: '/assets/gallery/campus-view.jpg', title: 'Campus View' },
-      { id: 2, type: 'image', category: 'Seminars', url: '/assets/gallery/seminar.jpg', title: 'Guest Lecture' },
-      { id: 3, type: 'image', category: 'Cultural Events', url: '/assets/gallery/annual-fest.jpg', title: 'Annual Fest' },
-      { id: 4, type: 'image', category: 'Achievements', url: '/assets/gallery/awards.jpg', title: 'Award Ceremony' },
-      { id: 5, type: 'image', category: 'Leadership Moments', url: '/assets/gallery/leadership.jpg', title: 'Chairman Speech' }
+      { id: 1, type: 'image', category: 'Campus Life', url: '/assets/gallery/campus-view.png', title: 'Campus View' },
+      { id: 2, type: 'image', category: 'Seminars', url: '/assets/gallery/seminar.png', title: 'Guest Lecture' },
+      { id: 3, type: 'image', category: 'Cultural Events', url: '/assets/gallery/annual-fest.png', title: 'Annual Fest' },
+      { id: 4, type: 'image', category: 'Achievements', url: '/assets/gallery/awards.png', title: 'Award Ceremony' },
+      { id: 5, type: 'image', category: 'Leadership Moments', url: '/assets/gallery/leadership.png', title: 'Chairman Speech' }
     ],
 
     freshersParty: [
-      { id: 1, url: '/assets/events/freshers-1.jpg', size: 'large' },
-      { id: 2, url: '/assets/events/freshers-2.jpg', size: 'small' },
-      { id: 3, url: '/assets/events/freshers-3.jpg', size: 'small' },
-      { id: 4, url: '/assets/events/freshers-4.jpg', size: 'medium' }
+      { id: 1, url: '/assets/events/freshers-1.png', size: 'large' },
+      { id: 2, url: '/assets/events/freshers-2.png', size: 'small' },
+      { id: 3, url: '/assets/events/freshers-3.png', size: 'small' },
+      { id: 4, url: '/assets/events/freshers-4.png', size: 'medium' }
     ],
 
     reels: [
