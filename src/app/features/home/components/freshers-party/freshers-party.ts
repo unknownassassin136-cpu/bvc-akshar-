@@ -27,18 +27,26 @@ export class FreshersParty implements AfterViewInit, OnDestroy {
   ngAfterViewInit() {
     this.ctx = gsap.context(() => {
       // Lightweight stagger for masonry items
-      gsap.from('.masonry-item', {
-        scrollTrigger: {
-          trigger: this.freshersSection.nativeElement,
-          start: 'top 70%',
+      gsap.fromTo('.masonry-item', 
+        { 
+          scale: 0.9, 
+          opacity: 0, 
+          y: 40 
         },
-        scale: 0.9,
-        opacity: 0,
-        y: 40,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: 'back.out(1.2)'
-      });
+        {
+          scrollTrigger: {
+            trigger: this.freshersSection.nativeElement,
+            start: 'top 85%',
+            toggleActions: 'play none none none'
+          },
+          scale: 1,
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: 'back.out(1.2)'
+        }
+      );
     });
   }
 

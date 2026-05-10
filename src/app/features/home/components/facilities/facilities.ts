@@ -23,29 +23,43 @@ export class Facilities implements AfterViewInit, OnDestroy {
   ngAfterViewInit() {
     this.ctx = gsap.context(() => {
       // Cinematic image reveal
-      gsap.from('.facility-img-wrapper', {
-        scrollTrigger: {
-          trigger: this.facilitiesSection.nativeElement,
-          start: 'top 70%',
+      gsap.fromTo('.facility-img-wrapper', 
+        { 
+          x: -50, 
+          opacity: 0 
         },
-        x: -50,
-        opacity: 0,
-        duration: 1.2,
-        ease: 'power3.out'
-      });
+        {
+          scrollTrigger: {
+            trigger: this.facilitiesSection.nativeElement,
+            start: 'top 85%',
+            toggleActions: 'play none none none'
+          },
+          x: 0,
+          opacity: 1,
+          duration: 1.2,
+          ease: 'power3.out'
+        }
+      );
 
       // Stagger feature blocks
-      gsap.from('.facility-block', {
-        scrollTrigger: {
-          trigger: '.facilities-content',
-          start: 'top 80%',
+      gsap.fromTo('.facility-block', 
+        { 
+          y: 30, 
+          opacity: 0 
         },
-        y: 30,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: 'power2.out'
-      });
+        {
+          scrollTrigger: {
+            trigger: '.facilities-content',
+            start: 'top 85%',
+            toggleActions: 'play none none none'
+          },
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: 'power2.out'
+        }
+      );
     });
   }
 

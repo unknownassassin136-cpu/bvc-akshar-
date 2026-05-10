@@ -24,17 +24,24 @@ export class CampusLife implements AfterViewInit, OnDestroy {
   ngAfterViewInit() {
     this.ctx = gsap.context(() => {
       // Elegant motion transition for hostel and transport cards
-      gsap.from('.campus-card', {
-        scrollTrigger: {
-          trigger: this.campusSection.nativeElement,
-          start: 'top 75%',
+      gsap.fromTo('.campus-card', 
+        { 
+          y: 40, 
+          opacity: 0 
         },
-        y: 40,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: 'power3.out'
-      });
+        {
+          scrollTrigger: {
+            trigger: this.campusSection.nativeElement,
+            start: 'top 85%',
+            toggleActions: 'play none none none'
+          },
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: 'power3.out'
+        }
+      );
     });
   }
 
