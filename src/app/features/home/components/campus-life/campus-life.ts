@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 import { environment } from '../../../../../environments/environment';
 
-import { ImageFallback } from '../../../../../shared/directives/image-fallback';
+import { ImageFallback } from '../../../../shared/directives/image-fallback';
 
 @Component({
   selector: 'app-campus-life',

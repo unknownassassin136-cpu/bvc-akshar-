@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-import { ImageFallback } from '../../../../../shared/directives/image-fallback';
+import { ImageFallback } from '../../../../shared/directives/image-fallback';
 
 @Component({
   selector: 'app-leadership',
