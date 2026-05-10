@@ -1,15 +1,17 @@
+const mediaBase = 'https://raw.githubusercontent.com/unknownassassin136-cpu/bvc-akshar-/refs/heads/main/bvc%20pics';
+
 export const environment = {
   production: false,
 
   leadership: {
     chairmanImage: 'https://placehold.co/400x400/003366/ffffff?text=Chairman',
     mdImage: 'https://placehold.co/400x400/003366/ffffff?text=MD',
-    secretaryImage: 'https://raw.githubusercontent.com/unknownassassin136-cpu/bvc-akshar-/refs/heads/main/bvc%20pics/secratery%20image.jpg'
+    secretaryImage: `${mediaBase}/leadership/secratery image.jpg`
   },
 
   media: {
     heroVideo: '',
-    heroImage: 'https://raw.githubusercontent.com/unknownassassin136-cpu/bvc-akshar-/refs/heads/main/bvc%20pics/secratery%20image.jpg',
+    heroImage: `${mediaBase}/leadership/secratery image.jpg`,
 
     // Phase 4 Media Architecture
     categories: ['All', 'Cultural Events', 'Freshers Party', 'Seminars', 'Achievements', 'Campus Life', 'Leadership Moments'],
@@ -23,7 +25,7 @@ export const environment = {
     ],
 
     freshersParty: [
-      { id: 1, url: 'https://placehold.co/600x800/ff0066/ffffff?text=Dance', size: 'large' },
+      { id: 1, url: `${mediaBase}/leadership/secratery image.jpg`, size: 'large' },
       { id: 2, url: 'https://placehold.co/600x400/6600ff/ffffff?text=Music', size: 'small' },
       { id: 3, url: 'https://placehold.co/600x400/00ccff/ffffff?text=Vibe', size: 'small' },
       { id: 4, url: 'https://placehold.co/800x600/ff9900/ffffff?text=Crowd', size: 'medium' }
