@@ -1,0 +1,80 @@
+<section id="leadership" #leadershipSection class="py-24 bg-slate-50 relative overflow-hidden">
+  <!-- Decorative Elements -->
+  <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+    <div class="absolute top-20 right-10 w-96 h-96 bg-brand-blue/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 left-10 w-80 h-80 bg-brand-gold/10 rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Header -->
+    <div class="leadership-header text-center mb-20">
+      <h4 class="text-brand-gold font-bold uppercase tracking-widest text-sm mb-3">Our Visionaries</h4>
+      <h2 class="font-serif text-4xl md:text-5xl text-brand-blue font-bold mb-6">Leadership Team</h2>
+      <div class="w-24 h-1 bg-brand-gold mx-auto"></div>
+      <p class="mt-6 text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed">
+        Guided by experienced visionaries committed to academic excellence and holistic student development.
+      </p>
+    </div>
+
+    <!-- Leadership Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
+      
+      <!-- Chairman Card -->
+      <div class="leadership-card group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-slate-100 flex flex-col items-center text-center">
+        <!-- Glowing Image Frame -->
+        <div class="relative w-48 h-48 mb-6 mx-auto">
+          <div class="absolute inset-0 rounded-full bg-gradient-to-r from-brand-gold to-brand-blue opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-500"></div>
+          <div class="absolute inset-1 rounded-full bg-white p-1 z-10">
+            <img [src]="leadership.chairmanImage" alt="Chairman" class="w-full h-full object-cover rounded-full filter grayscale group-hover:grayscale-0 transition-all duration-500">
+          </div>
+        </div>
+        
+        <h3 class="font-serif text-2xl font-bold text-brand-blue mb-2">Sri Bonam Krishna Satish</h3>
+        <p class="text-brand-gold font-bold uppercase tracking-wider text-sm mb-4">Chairman</p>
+        <p class="text-slate-600 leading-relaxed text-sm">
+          A visionary leader dedicated to transforming the educational landscape of Amalapuram, instilling a culture of excellence and discipline.
+        </p>
+      </div>
+
+      <!-- Managing Director Card -->
+      <div class="leadership-card group relative bg-brand-blue rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-brand-blue flex flex-col items-center text-center overflow-hidden">
+        <!-- Glassmorphism overlay -->
+        <div class="absolute inset-0 bg-white/5 backdrop-blur-sm z-0"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-brand-blue/90 z-0"></div>
+        
+        <!-- Glowing Image Frame -->
+        <div class="relative w-48 h-48 mb-6 mx-auto z-10">
+          <div class="absolute inset-0 rounded-full bg-gradient-to-r from-brand-gold-light to-brand-gold opacity-30 group-hover:opacity-100 blur-md transition-opacity duration-500 animate-pulse"></div>
+          <div class="absolute inset-1 rounded-full bg-brand-blue p-1 z-10">
+            <img [src]="leadership.mdImage" alt="Managing Director" class="w-full h-full object-cover rounded-full border-2 border-brand-gold">
+          </div>
+        </div>
+        
+        <h3 class="relative z-10 font-serif text-2xl font-bold text-white mb-2">Bonam Vijaya Lakshmi</h3>
+        <p class="relative z-10 text-brand-gold font-bold uppercase tracking-wider text-sm mb-4">Managing Director</p>
+        <p class="relative z-10 text-slate-300 leading-relaxed text-sm">
+          Spearheading innovative academic programs and fostering an environment that nurtures student success in competitive exams.
+        </p>
+      </div>
+
+      <!-- Secretary & Correspondent Card -->
+      <div class="leadership-card group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-slate-100 flex flex-col items-center text-center">
+        <!-- Glowing Image Frame -->
+        <div class="relative w-48 h-48 mb-6 mx-auto">
+          <div class="absolute inset-0 rounded-full bg-gradient-to-r from-brand-blue to-brand-gold opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-500"></div>
+          <div class="absolute inset-1 rounded-full bg-white p-1 z-10">
+            <img [src]="leadership.secretaryImage" alt="Secretary" class="w-full h-full object-cover rounded-full filter grayscale group-hover:grayscale-0 transition-all duration-500">
+          </div>
+        </div>
+        
+        <h3 class="font-serif text-2xl font-bold text-brand-blue mb-2">Secretary Name</h3>
+        <p class="text-brand-gold font-bold uppercase tracking-wider text-sm mb-4">Secretary & Correspondent</p>
+        <p class="text-slate-600 leading-relaxed text-sm">
+          Ensuring operational excellence and providing state-of-the-art facilities that support our students' academic journey.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>

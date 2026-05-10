@@ -1,0 +1,73 @@
+<section #gallerySection id="gallery" class="py-24 bg-white relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Header -->
+    <div class="gallery-header text-center mb-12">
+      <h4 class="text-brand-gold font-bold uppercase tracking-widest text-sm mb-3">Moments of Pride</h4>
+      <h2 class="font-serif text-4xl md:text-5xl text-brand-blue font-bold mb-6">Our Legacy in Focus</h2>
+      <div class="w-24 h-1 bg-brand-gold mx-auto mb-8"></div>
+      
+      <!-- Category Tabs -->
+      <div class="flex flex-wrap justify-center gap-3 mt-8">
+        @for (cat of categories; track cat) {
+          <button 
+            (click)="setCategory(cat)"
+            class="px-5 py-2 rounded-full text-sm font-medium transition-all duration-300"
+            [class.bg-brand-blue]="activeCategory === cat"
+            [class.text-white]="activeCategory === cat"
+            [class.bg-slate-100]="activeCategory !== cat"
+            [class.text-slate-600]="activeCategory !== cat"
+            [class.hover:bg-slate-200]="activeCategory !== cat">
+            {{ cat }}
+          </button>
+        }
+      </div>
+    </div>
+
+    <!-- Media Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 min-h-[400px]">
+      
+      @for (media of filteredMedia; track media.id) {
+        <div class="gallery-item relative rounded-2xl overflow-hidden shadow-md cursor-pointer group bg-slate-100 border border-slate-200 aspect-[4/5]"
+             (click)="openLightbox(media)">
+             
+          @if (media.type === 'image') {
+            <img [src]="$any(media).url" loading="lazy" [alt]="$any(media).title" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+            <div class="absolute inset-0 bg-brand-blue/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-4">
+              <svg class="w-8 h-8 text-white mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+              <h3 class="text-white font-bold font-serif text-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-150">{{ $any(media).title }}</h3>
+              <p class="text-brand-gold text-xs uppercase tracking-wider mt-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-200">{{ media.category }}</p>
+            </div>
+          } @else if (media.type === 'reel') {
+            <!-- Reel Preview Card -->
+            <img [src]="$any(media).thumbnail" loading="lazy" [alt]="'Reel ' + media.id" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+            
+            <!-- Constant Reel Indicator -->
+            <div class="absolute top-3 right-3 glassmorphism-dark px-2 py-1 rounded border border-white/20 flex items-center shadow-lg">
+              <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path></svg>
+              <span class="text-[10px] font-bold text-white ml-1 uppercase">Reel</span>
+            </div>
+
+            <!-- Hover Play Button -->
+            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-300 flex flex-col items-center justify-center">
+              <div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm border border-white/50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+              </div>
+            </div>
+          }
+        </div>
+      }
+      
+      <!-- Empty State -->
+      @if (filteredMedia.length === 0) {
+        <div class="col-span-full py-12 text-center text-slate-500">
+          <svg class="w-16 h-16 mx-auto mb-4 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+          <p>No media found for this category yet.</p>
+        </div>
+      }
+
+    </div>
+  </div>
+
+  <app-lightbox [isOpen]="isLightboxOpen" [mediaItem]="currentMedia" (close)="closeLightbox()"></app-lightbox>
+</section>
