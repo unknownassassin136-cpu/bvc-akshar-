@@ -6,10 +6,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+import { ImageFallback } from '../../../../shared/directives/image-fallback';
+
 @Component({
   selector: 'app-gallery',
   standalone: true,
-  imports: [Lightbox],
+  imports: [Lightbox, ImageFallback],
   templateUrl: './gallery.html',
   styleUrl: './gallery.scss'
 })

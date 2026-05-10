@@ -23,6 +23,11 @@ export const environment = {
     transportImage: '/assets/campus-life/transport.jpg'
   },
 
+  facilities: {
+    bgImage: '/assets/facilities/bg.jpg',
+    campusImage: '/assets/facilities/campus.jpg'
+  },
+
   media: {
     heroVideo: '/assets/hero/hero-bg.mp4',
     heroImage: '/assets/hero/hero-bg.jpg',

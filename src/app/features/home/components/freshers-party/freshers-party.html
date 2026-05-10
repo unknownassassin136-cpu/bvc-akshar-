@@ -30,7 +30,10 @@
              (click)="openLightbox(img)">
           
           <!-- Image -->
-          <img [src]="img.url" alt="Freshers Party Vibe" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+          <img [src]="img.url" 
+               appImageFallback="https://placehold.co/800x600/1a1a1a/ffffff?text=Party+Moment"
+               alt="Freshers Party Vibe" 
+               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
           
           <!-- Cinematic Overlay -->
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>

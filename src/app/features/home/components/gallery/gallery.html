@@ -32,7 +32,10 @@
              (click)="openLightbox(media)">
              
           @if (media.type === 'image') {
-            <img [src]="$any(media).url" loading="lazy" [alt]="$any(media).title" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+            <img [src]="$any(media).url" 
+                 appImageFallback="https://placehold.co/600x400/1a1a1a/ffffff?text=Image+Missing"
+                 loading="lazy" [alt]="$any(media).title" 
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
             <div class="absolute inset-0 bg-brand-blue/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-4">
               <svg class="w-8 h-8 text-white mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-100" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
               <h3 class="text-white font-bold font-serif text-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-150">{{ $any(media).title }}</h3>
@@ -40,7 +43,10 @@
             </div>
           } @else if (media.type === 'reel') {
             <!-- Reel Preview Card -->
-            <img [src]="$any(media).thumbnail" loading="lazy" [alt]="'Reel ' + media.id" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+            <img [src]="$any(media).thumbnail" 
+                 appImageFallback="https://placehold.co/600x400/1a1a1a/ffffff?text=Video+Thumbnail"
+                 loading="lazy" [alt]="'Reel ' + media.id" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
             
             <!-- Constant Reel Indicator -->
             <div class="absolute top-3 right-3 glassmorphism-dark px-2 py-1 rounded border border-white/20 flex items-center shadow-lg">

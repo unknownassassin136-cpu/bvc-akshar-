@@ -6,10 +6,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+import { ImageFallback } from '../../../../shared/directives/image-fallback';
+
 @Component({
   selector: 'app-freshers-party',
   standalone: true,
-  imports: [Lightbox],
+  imports: [Lightbox, ImageFallback],
   templateUrl: './freshers-party.html',
   styleUrl: './freshers-party.scss'
 })

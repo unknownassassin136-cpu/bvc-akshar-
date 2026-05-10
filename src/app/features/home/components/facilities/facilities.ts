@@ -4,15 +4,20 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+import { environment } from '../../../../../environments/environment';
+import { ImageFallback } from '../../../../shared/directives/image-fallback';
+
 @Component({
   selector: 'app-facilities',
   standalone: true,
-  imports: [],
+  imports: [ImageFallback],
   templateUrl: './facilities.html',
   styleUrl: './facilities.scss'
 })
 export class Facilities implements AfterViewInit, OnDestroy {
   @ViewChild('facilitiesSection') facilitiesSection!: ElementRef;
+  
+  facilities = environment.facilities;
   private ctx!: gsap.Context;
 
   ngAfterViewInit() {
