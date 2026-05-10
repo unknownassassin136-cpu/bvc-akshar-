@@ -10,7 +10,7 @@ import { ImageFallback } from '../../../../shared/directives/image-fallback';
 @Component({
   selector: 'app-leadership',
   standalone: true,
-  imports: [ImageFallback],
+  imports: [],
   templateUrl: './leadership.html',
   styleUrl: './leadership.scss'
 })
@@ -30,7 +30,6 @@ export class Leadership implements AfterViewInit, OnDestroy {
           toggleActions: 'play none none reverse'
         },
         y: 60,
-        opacity: 0,
         duration: 1,
         stagger: 0.2,
         ease: 'power3.out'
