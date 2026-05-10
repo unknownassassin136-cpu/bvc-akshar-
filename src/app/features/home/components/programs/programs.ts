@@ -45,17 +45,24 @@ export class Programs implements AfterViewInit, OnDestroy {
   ngAfterViewInit() {
     this.ctx = gsap.context(() => {
       // Lightweight stagger for program cards
-      gsap.from('.program-card', {
-        scrollTrigger: {
-          trigger: this.programsSection.nativeElement,
-          start: 'top 80%',
+      gsap.fromTo('.program-card', 
+        { 
+          y: 40, 
+          opacity: 0 
         },
-        y: 40,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: 'power2.out'
-      });
+        {
+          scrollTrigger: {
+            trigger: this.programsSection.nativeElement,
+            start: 'top 85%',
+            toggleActions: 'play none none none'
+          },
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: 'power2.out'
+        }
+      );
     });
   }
 
