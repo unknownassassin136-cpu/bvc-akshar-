@@ -5,10 +5,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+import { ImageFallback } from '../../../../../shared/directives/image-fallback';
+
 @Component({
   selector: 'app-leadership',
   standalone: true,
-  imports: [],
+  imports: [ImageFallback],
   templateUrl: './leadership.html',
   styleUrl: './leadership.scss'
 })
