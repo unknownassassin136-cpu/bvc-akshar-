@@ -4,12 +4,12 @@ export const environment = {
   leadership: {
     chairmanImage: 'https://placehold.co/400x400/003366/ffffff?text=Chairman',
     mdImage: 'https://placehold.co/400x400/003366/ffffff?text=MD',
-    secretaryImage: 'https://media.licdn.com/dms/image/v2/C4E03AQFLSza9q2kS-A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1660268003803?e=1779926400&v=beta&t=EeBkLCghOmR8i18bNRoTJgv0yk8zYOwb_2nLrt-C98k'
+    secretaryImage: 'https://raw.githubusercontent.com/unknownassassin136-cpu/bvc-akshar-/refs/heads/main/bvc%20pics/secratery%20image.jpg'
   },
 
   media: {
     heroVideo: '',
-    heroImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfYoYQ5rPDniRl9At7Rm2h9_HuUI5JHcerhg&s',
+    heroImage: 'https://raw.githubusercontent.com/unknownassassin136-cpu/bvc-akshar-/refs/heads/main/bvc%20pics/secratery%20image.jpg',
 
     // Phase 4 Media Architecture
     categories: ['All', 'Cultural Events', 'Freshers Party', 'Seminars', 'Achievements', 'Campus Life', 'Leadership Moments'],
