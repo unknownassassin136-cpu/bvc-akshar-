@@ -54,18 +54,26 @@ export class Achievements implements AfterViewInit, OnDestroy {
       });
 
       // Stagger entrance for rank cards
-      gsap.from('.rank-card', {
-        scrollTrigger: {
-          trigger: '.ranks-container',
-          start: 'top 80%',
+      gsap.fromTo('.rank-card', 
+        { 
+          y: 40, 
+          opacity: 0,
+          scale: 0.95 
         },
-        y: 40,
-        opacity: 0,
-        scale: 0.95,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: 'power3.out'
-      });
+        {
+          scrollTrigger: {
+            trigger: '.ranks-container',
+            start: 'top 85%',
+            toggleActions: 'play none none none'
+          },
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: 'power3.out'
+        }
+      );
 
     });
   }
