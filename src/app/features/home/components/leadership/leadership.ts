@@ -10,7 +10,7 @@ import { ImageFallback } from '../../../../shared/directives/image-fallback';
 @Component({
   selector: 'app-leadership',
   standalone: true,
-  imports: [],
+  imports: [ImageFallback],
   templateUrl: './leadership.html',
   styleUrl: './leadership.scss'
 })
@@ -23,17 +23,24 @@ export class Leadership implements AfterViewInit, OnDestroy {
   ngAfterViewInit() {
     this.ctx = gsap.context(() => {
       // Lightweight scroll trigger animation for the cards
-      gsap.from('.leadership-card', {
-        scrollTrigger: {
-          trigger: this.leadershipSection.nativeElement,
-          start: 'top 80%',
-          toggleActions: 'play none none reverse'
+      gsap.fromTo('.leadership-card', 
+        { 
+          y: 60, 
+          opacity: 0 
         },
-        y: 60,
-        duration: 1,
-        stagger: 0.2,
-        ease: 'power3.out'
-      });
+        {
+          scrollTrigger: {
+            trigger: this.leadershipSection.nativeElement,
+            start: 'top 85%',
+            toggleActions: 'play none none none'
+          },
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          stagger: 0.2,
+          ease: 'power3.out'
+        }
+      );
       
       gsap.from('.leadership-header', {
         scrollTrigger: {
