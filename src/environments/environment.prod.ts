@@ -1,4 +1,4 @@
-const mediaBase = 'https://raw.githubusercontent.com/unknownassassin136-cpu/bvc-akshar-/refs/heads/main/bvc%20pics';
+const mediaBase = '/assets';
 
 export const environment = {
   production: true,
@@ -20,7 +20,7 @@ export const environment = {
   },
 
   media: {
-    // heroVideo: `${mediaBase}/hero/hero-bg.mp4`,
+    heroVideo: `${mediaBase}/hero/hero-bg.mp4`,
     heroImage: `${mediaBase}/hero/hero-bg.jpg`,
 
     categories: ['All', 'Cultural Events', 'Freshers Party', 'Seminars', 'Achievements', 'Campus Life', 'Leadership Moments'],

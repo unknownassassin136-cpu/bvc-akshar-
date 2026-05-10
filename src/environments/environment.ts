@@ -1,4 +1,4 @@
-const mediaBase = 'https://raw.githubusercontent.com/unknownassassin136-cpu/bvc-akshar-/refs/heads/main/bvc%20pics';
+const mediaBase = '/assets';
 
 export const environment = {
   production: false,
