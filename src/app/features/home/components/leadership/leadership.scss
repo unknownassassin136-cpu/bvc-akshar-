@@ -1,0 +1,10 @@
+.leadership-card {
+  perspective: 1500px;
+  transform-style: preserve-3d;
+  will-change: transform;
+  
+  // Ensure content also has 3D feel
+  & > * {
+    transform-style: preserve-3d;
+  }
+}

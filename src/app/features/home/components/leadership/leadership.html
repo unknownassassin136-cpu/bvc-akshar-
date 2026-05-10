@@ -21,7 +21,10 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
       
       <!-- Chairman Card -->
-      <div class="leadership-card group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-slate-100 flex flex-col items-center text-center">
+      <div #chairCard
+           (mousemove)="onMouseMove($event, chairCard)"
+           (mouseleave)="onMouseLeave(chairCard)"
+           class="leadership-card group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-500 border border-slate-100 flex flex-col items-center text-center">
         <!-- Glowing Image Frame -->
         <div class="relative w-48 h-48 mb-6 mx-auto">
           <div class="absolute inset-0 rounded-full bg-gradient-to-r from-brand-gold to-brand-blue opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-500"></div>
@@ -41,7 +44,10 @@
       </div>
 
       <!-- Managing Director Card -->
-      <div class="leadership-card group relative bg-brand-blue rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-brand-blue flex flex-col items-center text-center overflow-hidden">
+      <div #mdCard
+           (mousemove)="onMouseMove($event, mdCard)"
+           (mouseleave)="onMouseLeave(mdCard)"
+           class="leadership-card group relative bg-brand-blue rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-500 border border-brand-blue flex flex-col items-center text-center overflow-hidden">
         <!-- Glassmorphism overlay -->
         <div class="absolute inset-0 bg-white/5 backdrop-blur-sm z-0"></div>
         <div class="absolute inset-0 bg-gradient-to-b from-transparent to-brand-blue/90 z-0"></div>
@@ -65,7 +71,10 @@
       </div>
 
       <!-- Secretary & Correspondent Card -->
-      <div class="leadership-card group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-slate-100 flex flex-col items-center text-center">
+      <div #secCard
+           (mousemove)="onMouseMove($event, secCard)"
+           (mouseleave)="onMouseLeave(secCard)"
+           class="leadership-card group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-500 border border-slate-100 flex flex-col items-center text-center">
         <!-- Glowing Image Frame -->
         <div class="relative w-48 h-48 mb-6 mx-auto">
           <div class="absolute inset-0 rounded-full bg-gradient-to-r from-brand-blue to-brand-gold opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-500"></div>
