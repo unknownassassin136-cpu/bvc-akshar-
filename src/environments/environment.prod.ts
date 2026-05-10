@@ -1,7 +1,6 @@
-const mediaBase = '/assets';
-
 export const environment = {
   production: true,
+  mediaBase: '/assets',
 
   // Future Firebase keys go here securely
   firebase: {
@@ -14,35 +13,35 @@ export const environment = {
   supabaseKey: '',
 
   leadership: {
-    chairmanImage: `${mediaBase}/leadership/chairman.jpg`,
-    mdImage: `${mediaBase}/leadership/md.jpg`,
-    secretaryImage: `${mediaBase}/leadership/secratery image.jpg`
+    chairmanImage: '/assets/leadership/chairman.jpg',
+    mdImage: '/assets/leadership/md.jpg',
+    secretaryImage: '/assets/leadership/secretary.jpg'
   },
 
   media: {
-    heroVideo: `${mediaBase}/hero/hero-bg.mp4`,
-    heroImage: `${mediaBase}/hero/hero-bg.jpg`,
+    heroVideo: '/assets/hero/hero-bg.mp4',
+    heroImage: '/assets/hero/hero-bg.jpg',
 
     categories: ['All', 'Cultural Events', 'Freshers Party', 'Seminars', 'Achievements', 'Campus Life', 'Leadership Moments'],
 
     gallery: [
-      { id: 1, type: 'image', category: 'Campus Life', url: `${mediaBase}/gallery/campus-view.jpg`, title: 'Campus View' },
-      { id: 2, type: 'image', category: 'Seminars', url: `${mediaBase}/gallery/seminar.jpg`, title: 'Guest Lecture' },
-      { id: 3, type: 'image', category: 'Cultural Events', url: `${mediaBase}/gallery/annual-fest.jpg`, title: 'Annual Fest' },
-      { id: 4, type: 'image', category: 'Achievements', url: `${mediaBase}/gallery/awards.jpg`, title: 'Award Ceremony' },
-      { id: 5, type: 'image', category: 'Leadership Moments', url: `${mediaBase}/gallery/leadership.jpg`, title: 'Chairman Speech' }
+      { id: 1, type: 'image', category: 'Campus Life', url: '/assets/gallery/campus-view.jpg', title: 'Campus View' },
+      { id: 2, type: 'image', category: 'Seminars', url: '/assets/gallery/seminar.jpg', title: 'Guest Lecture' },
+      { id: 3, type: 'image', category: 'Cultural Events', url: '/assets/gallery/annual-fest.jpg', title: 'Annual Fest' },
+      { id: 4, type: 'image', category: 'Achievements', url: '/assets/gallery/awards.jpg', title: 'Award Ceremony' },
+      { id: 5, type: 'image', category: 'Leadership Moments', url: '/assets/gallery/leadership.jpg', title: 'Chairman Speech' }
     ],
 
     freshersParty: [
-      { id: 1, url: `${mediaBase}/events/freshers-1.jpg`, size: 'large' },
-      { id: 2, url: `${mediaBase}/events/freshers-2.jpg`, size: 'small' },
-      { id: 3, url: `${mediaBase}/events/freshers-3.jpg`, size: 'small' },
-      { id: 4, url: `${mediaBase}/events/freshers-4.jpg`, size: 'medium' }
+      { id: 1, url: '/assets/events/freshers-1.jpg', size: 'large' },
+      { id: 2, url: '/assets/events/freshers-2.jpg', size: 'small' },
+      { id: 3, url: '/assets/events/freshers-3.jpg', size: 'small' },
+      { id: 4, url: '/assets/events/freshers-4.jpg', size: 'medium' }
     ],
 
     reels: [
-      { id: 1, type: 'reel', category: 'Cultural Events', thumbnail: `${mediaBase}/reels/reel-1-thumb.jpg`, videoUrl: '' },
-      { id: 2, type: 'reel', category: 'Campus Life', thumbnail: `${mediaBase}/reels/reel-2-thumb.jpg`, videoUrl: '' }
+      { id: 1, type: 'reel', category: 'Cultural Events', thumbnail: '/assets/reels/reel-1-thumb.jpg', videoUrl: '' },
+      { id: 2, type: 'reel', category: 'Campus Life', thumbnail: '/assets/reels/reel-2-thumb.jpg', videoUrl: '' }
     ]
   },
 
