@@ -4,36 +4,36 @@ export const environment = {
   production: false,
 
   leadership: {
-    chairmanImage: 'https://placehold.co/400x400/003366/ffffff?text=Chairman',
-    mdImage: 'https://placehold.co/400x400/003366/ffffff?text=MD',
+    chairmanImage: `${mediaBase}/leadership/chairman.jpg`,
+    mdImage: `${mediaBase}/leadership/md.jpg`,
     secretaryImage: `${mediaBase}/leadership/secratery image.jpg`
   },
 
   media: {
-    heroVideo: '',
-    heroImage: `${mediaBase}/leadership/secratery image.jpg`,
+    heroVideo: `${mediaBase}/hero/hero-bg.mp4`,
+    heroImage: `${mediaBase}/hero/hero-bg.jpg`,
 
     // Phase 4 Media Architecture
     categories: ['All', 'Cultural Events', 'Freshers Party', 'Seminars', 'Achievements', 'Campus Life', 'Leadership Moments'],
 
     gallery: [
-      { id: 1, type: 'image', category: 'Campus Life', url: 'https://placehold.co/600x400/003366/ffffff?text=Campus+1', title: 'Campus View' },
-      { id: 2, type: 'image', category: 'Seminars', url: 'https://placehold.co/600x400/D4AF37/ffffff?text=Seminar+1', title: 'Guest Lecture' },
-      { id: 3, type: 'image', category: 'Cultural Events', url: 'https://placehold.co/800x600/001a4d/ffffff?text=Cultural+Fest', title: 'Annual Fest' },
-      { id: 4, type: 'image', category: 'Achievements', url: 'https://placehold.co/600x800/003366/ffffff?text=Award+Ceremony', title: 'Award Ceremony' },
-      { id: 5, type: 'image', category: 'Leadership Moments', url: 'https://placehold.co/600x400/1a1a1a/ffffff?text=Leadership', title: 'Chairman Speech' }
+      { id: 1, type: 'image', category: 'Campus Life', url: `${mediaBase}/gallery/campus-view.jpg`, title: 'Campus View' },
+      { id: 2, type: 'image', category: 'Seminars', url: `${mediaBase}/gallery/seminar.jpg`, title: 'Guest Lecture' },
+      { id: 3, type: 'image', category: 'Cultural Events', url: `${mediaBase}/gallery/annual-fest.jpg`, title: 'Annual Fest' },
+      { id: 4, type: 'image', category: 'Achievements', url: `${mediaBase}/gallery/awards.jpg`, title: 'Award Ceremony' },
+      { id: 5, type: 'image', category: 'Leadership Moments', url: `${mediaBase}/gallery/leadership.jpg`, title: 'Chairman Speech' }
     ],
 
     freshersParty: [
-      { id: 1, url: `${mediaBase}/leadership/secratery image.jpg`, size: 'large' },
-      { id: 2, url: 'https://placehold.co/600x400/6600ff/ffffff?text=Music', size: 'small' },
-      { id: 3, url: 'https://placehold.co/600x400/00ccff/ffffff?text=Vibe', size: 'small' },
-      { id: 4, url: 'https://placehold.co/800x600/ff9900/ffffff?text=Crowd', size: 'medium' }
+      { id: 1, url: `${mediaBase}/events/freshers-1.jpg`, size: 'large' },
+      { id: 2, url: `${mediaBase}/events/freshers-2.jpg`, size: 'small' },
+      { id: 3, url: `${mediaBase}/events/freshers-3.jpg`, size: 'small' },
+      { id: 4, url: `${mediaBase}/events/freshers-4.jpg`, size: 'medium' }
     ],
 
     reels: [
-      { id: 1, type: 'reel', category: 'Cultural Events', thumbnail: 'https://www.instagram.com/p/DRGz4vdkVzd/', videoUrl: '' },
-      { id: 2, type: 'reel', category: 'Campus Life', thumbnail: 'https://placehold.co/400x700/000000/ffffff?text=Reel+2', videoUrl: '' }
+      { id: 1, type: 'reel', category: 'Cultural Events', thumbnail: `${mediaBase}/reels/reel-1-thumb.jpg`, videoUrl: '' },
+      { id: 2, type: 'reel', category: 'Campus Life', thumbnail: `${mediaBase}/reels/reel-2-thumb.jpg`, videoUrl: '' }
     ]
   },
 
